@@ -1,0 +1,9 @@
+{
+  "name": "control-de-tienda",
+  "version": "0.1.0",
+  "description": "Base inicial para un sistema de control de tienda.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js"
+  }
+}

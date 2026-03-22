@@ -1,0 +1,183 @@
+:root {
+  --bg: #f7f1e6;
+  --panel: rgba(255, 252, 246, 0.9);
+  --ink: #2f2319;
+  --muted: #7d6656;
+  --line: rgba(47, 35, 25, 0.12);
+  --accent: #0f8b66;
+  --warn: #d37a22;
+  --danger: #b04b4b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(211, 122, 34, 0.18), transparent 28%),
+    linear-gradient(160deg, #fff9f1 0%, #f4ebdd 55%, #eadfcf 100%);
+}
+
+.app {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 56px;
+}
+
+.hero,
+.card,
+.summary-card,
+.alert-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 18px 44px rgba(47, 35, 25, 0.07);
+}
+
+.hero {
+  padding: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(36px, 6vw, 70px);
+  line-height: 0.95;
+}
+
+.subtitle {
+  margin: 14px 0 0;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.summary,
+.layout {
+  margin-top: 18px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.summary-card {
+  padding: 18px;
+}
+
+.summary-card strong {
+  display: block;
+  font-size: 32px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+.products,
+.alerts {
+  display: grid;
+  gap: 14px;
+}
+
+.card,
+.alert-card {
+  padding: 18px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+}
+
+.category {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.name {
+  margin: 6px 0 0;
+  font-size: 24px;
+}
+
+.sku {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+dt {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+dd {
+  margin: 6px 0 0;
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+input,
+button {
+  border-radius: 14px;
+  padding: 12px 14px;
+  font: inherit;
+}
+
+input {
+  flex: 1;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+button {
+  border: none;
+  background: var(--ink);
+  color: white;
+  cursor: pointer;
+}
+
+.alert-card.low {
+  border-color: rgba(176, 75, 75, 0.25);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

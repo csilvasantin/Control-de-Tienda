@@ -1,0 +1,36 @@
+{
+  "store": {
+    "name": "Tienda Demo",
+    "currency": "EUR",
+    "updatedAt": "2026-03-22T10:00:00Z"
+  },
+  "products": [
+    {
+      "id": "prd-001",
+      "name": "Camiseta Negra",
+      "category": "Ropa",
+      "sku": "CAM-NEG-001",
+      "price": 19.95,
+      "stock": 24,
+      "minStock": 10
+    },
+    {
+      "id": "prd-002",
+      "name": "Gorra Roja",
+      "category": "Accesorios",
+      "sku": "GOR-ROJ-002",
+      "price": 12.5,
+      "stock": 7,
+      "minStock": 8
+    },
+    {
+      "id": "prd-003",
+      "name": "Sudadera Gris",
+      "category": "Ropa",
+      "sku": "SUD-GRI-003",
+      "price": 34.9,
+      "stock": 3,
+      "minStock": 6
+    }
+  ]
+}

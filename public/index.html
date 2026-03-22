@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Control de Tienda</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <p class="eyebrow">Retail Ops</p>
+        <h1>Control de Tienda</h1>
+        <p class="subtitle">Stock, alertas y visión rápida del estado operativo.</p>
+      </section>
+
+      <section class="summary" id="summary"></section>
+
+      <section class="layout">
+        <div>
+          <h2>Productos</h2>
+          <div class="products" id="products"></div>
+        </div>
+        <div>
+          <h2>Alertas</h2>
+          <div class="alerts" id="alerts"></div>
+        </div>
+      </section>
+    </main>
+
+    <template id="product-template">
+      <article class="card">
+        <div class="row">
+          <div>
+            <p class="category"></p>
+            <h3 class="name"></h3>
+          </div>
+          <span class="sku"></span>
+        </div>
+        <dl class="meta">
+          <div><dt>Precio</dt><dd class="price"></dd></div>
+          <div><dt>Stock</dt><dd class="stock"></dd></div>
+          <div><dt>Mínimo</dt><dd class="min-stock"></dd></div>
+        </dl>
+        <div class="actions">
+          <input class="stock-input" type="number" min="0">
+          <button class="save-button" type="button">Actualizar stock</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
